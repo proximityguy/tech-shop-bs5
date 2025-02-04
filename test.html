@@ -33,6 +33,43 @@
       display: flex;
       flex-direction: column;
     }
+
+    .btn-close:focus,
+    .btn-close:active {
+      box-shadow: none !important;
+      outline: none !important;
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+
+    input:hover {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    input:focus {
+      background-color: rgba(255, 255, 255, 1) !important;
+      color: rgb(0, 0, 0) !important;
+      border-color: rgba(255, 255, 255, 1) !important;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 1) !important;
+    }
+
+    .striped {
+      height: 40px;
+      margin: auto;
+      position: relative;
+    }
+
+    .striped-text {
+      display: block;
+      width: fit-content;
+      margin: auto;
+      text-align: center;
+      position: absolute;
+      top: 5%;
+      left: 30%;
+    }
   </style>
 </head>
 
@@ -53,7 +90,8 @@
 
     <form action="">
 
-      <input type="text" class="form-control mx-auto my-3 p-2 border border-1 border-secondary-subtle rounded-1"
+      <input type="text"
+        class="form-control mx-auto my-3 p-2 border border-1 border-secondary-subtle rounded-1 text-bg-dark"
         placeholder="Username">
 
       <input type="email"
@@ -72,21 +110,20 @@
     </form>
 
 
-    <div class="border border-success ">
+    <div class=" striped border border-1 border-dark ">
 
-      <hr class=" border border-danger border-1 opacity-75">
+      <hr class="border border-1 border-white">
 
-      <span class="border border-1 border-danger px-3 py-1" style="width: fit-content;">
-        or
-        login with
+      <span class=" striped-text text-bg-dark border border-1 border-dark px-3 py-1">
+        or login with
       </span>
 
     </div>
 
     <div class="btn-group d-flex flex-row justify-content-between gap-3 my-3">
-      <button type="button" class="btn btn-primary rounded-0">Facebook</button>
-      <button type="button" class="btn btn-danger rounded-0">Google</button>
-      <button type="button" class="btn btn-primary rounded-0">Twitter</button>
+      <button type="button" class="btn btn-primary rounded-1">Facebook</button>
+      <button type="button" class="btn btn-danger rounded-1">Google</button>
+      <button type="button" class="btn btn-primary rounded-1">Twitter</button>
     </div>
 
   </div>
